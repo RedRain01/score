@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.score.mapper.ScoreEventMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.score.model.ScoreEvent">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="property" column="property" jdbcType="INTEGER"/>
+            <result property="type" column="type" jdbcType="INTEGER"/>
+            <result property="eventName" column="event_name" jdbcType="VARCHAR"/>
+            <result property="proportion" column="proportion" jdbcType="INTEGER"/>
+            <result property="score" column="score" jdbcType="INTEGER"/>
+            <result property="parentId" column="parent_id" jdbcType="BIGINT"/>
+            <result property="levels" column="levels" jdbcType="INTEGER"/>
+            <result property="goalValue" column="goal_value" jdbcType="INTEGER"/>
+            <result property="unit" column="unit" jdbcType="VARCHAR"/>
+            <result property="state" column="state" jdbcType="INTEGER"/>
+            <result property="validTime" column="valid_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,property,type,
+        event_name,proportion,score,
+        parent_id,levels,goal_value,
+        unit,state,valid_time
+    </sql>
+</mapper>
